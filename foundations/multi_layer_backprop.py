@@ -23,9 +23,8 @@ class Solution:
 
         n = len(y_true)
         w1 = len(W1)
-        w2 = len(W1[0])
         out = W1 @ x.T + b1
-        act = np.array([max(0, o) for o in out])
+        act = np.maximum(0, out)
         y_pred = W2 @ act + b2
         loss = np.mean(np.square(y_pred - y_true))
         
