@@ -9,6 +9,6 @@ class Solution:
         # Return the embedding vectors for the given token IDs
         # return np.round(your_answer, 5)
         
-        out = np.array([embeddings[token_id] for token_id in token_ids])
+        
 
-        return np.round(out, decimals=5)
+        return np.round(np.array([embeddings[token_id] for token_id in token_ids]), decimals=5)
